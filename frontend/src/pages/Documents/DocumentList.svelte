@@ -8,7 +8,7 @@
         getDocumentPages,
     } from "../../services/documentService.js";
     // Import komponen thumbnail
-    import PdfThumbnail from "../../components/PdfThumbnail.svelte";
+    import PdfThumbnail from "../../components/common/PdfThumbnail.svelte";
 
     let documents = [];
     let loading = true;
@@ -86,7 +86,7 @@
     }
 
     function openDetailPreview(docId, page) {
-        detailPageUrl = `http://localhost:8080/split/${docId}/${page}`;
+        detailPageUrl = `/preview/split/${docId}/${page}`;
         detailPageName = page;
         showDetailModal = true;
     }
@@ -488,7 +488,7 @@
                                 >
                                     <!-- Debug: Matikan sementara PdfThumbnail untuk cek auto-download -->
                                     <PdfThumbnail
-                                        url={`http://localhost:8080/split/${currentDocId}/${page}`}
+                                        url={`/preview/split/${currentDocId}/${page}`}
                                     />
 
                                     <!-- Transparent layer for clicking -->

@@ -1,0 +1,535 @@
+﻿
+> frontend@0.0.0 build
+> vite build
+
+[36mvite v5.4.21 [32mbuilding for production...[36m[39m
+transforming...
+node.exe : 12:17:20 AM 
+[vite-plugin-svelte] C:/repo
+sitory-un/frontend/src/pages
+/Documents/DocumentAdd.svelt
+e:104:10 A11y: A form label 
+must be associated with a 
+control.
+At line:1 char:1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
+    + CategoryInfo          
+    : NotSpecified: (12:17  
+  :20 AM [vi...with a con   
+ trol.:String) [], Remot    
+eException
+    + FullyQualifiedErrorId 
+    : NativeCommandError
+ 
+102:         <!-- Judul -->
+103:         <div>
+104:           <label
+               ^
+105:             
+class="block text-sm 
+font-bold mb-2 
+text-slate-700 
+dark:text-slate-300"
+106:           >
+12:17:20 AM 
+[vite-plugin-svelte] C:/repo
+sitory-un/frontend/src/pages
+/Documents/DocumentAdd.svelt
+e:120:12 A11y: A form label 
+must be associated with a 
+control.
+118:         <div 
+class="grid md:grid-cols-2 
+gap-6">
+119:           <div>
+120:             <label
+                 ^
+121:               
+class="block text-sm 
+font-bold mb-2 
+text-slate-700 
+dark:text-slate-300"
+122:             >
+12:17:20 AM 
+[vite-plugin-svelte] C:/repo
+sitory-un/frontend/src/pages
+/Documents/DocumentAdd.svelt
+e:134:12 A11y: A form label 
+must be associated with a 
+control.
+132: 
+133:           <div>
+134:             <label
+                 ^
+135:               
+class="block text-sm 
+font-bold mb-2 
+text-slate-700 
+dark:text-slate-300"
+136:             >
+12:17:20 AM 
+[vite-plugin-svelte] C:/repo
+sitory-un/frontend/src/pages
+/Documents/DocumentAdd.svelt
+e:155:10 A11y: A form label 
+must be associated with a 
+control.
+153:         <!-- Status -->
+154:         <div>
+155:           <label
+               ^
+156:             
+class="block text-sm 
+font-bold mb-2 
+text-slate-700 
+dark:text-slate-300"
+157:           >
+12:17:20 AM 
+[vite-plugin-svelte] C:/repo
+sitory-un/frontend/src/pages
+/Documents/DocumentAdd.svelt
+e:171:10 A11y: A form label 
+must be associated with a 
+control.
+169:         <!-- Upload -->
+170:         <div>
+171:           <label
+               ^
+172:             
+class="block text-sm 
+font-bold mb-2 
+text-slate-700 
+dark:text-slate-300"
+173:           >
+12:17:20 AM 
+[vite-plugin-svelte] C:/repo
+sitory-un/frontend/src/pages
+/Documents/DocumentList.svel
+te:451:12 A11y: visible, 
+non-interactive elements 
+with an on:click event must 
+be accompanied by a 
+keyboard event handler. 
+Consider whether an 
+interactive element such as 
+<button type="button"> or 
+<a> might be more 
+appropriate. See https://sve
+lte.dev/docs/accessibility-w
+arnings#a11y-click-events-ha
+ve-key-events for more 
+details.
+449:             
+on:click={closePagesModal}
+450:         >
+451:             <div
+                 ^
+452:                 
+class="bg-white 
+dark:bg-slate-900 
+rounded-xl shadow-2xl 
+w-full max-w-4xl 
+max-h-[90vh] flex flex-col 
+overflow-hidden"
+453:                 
+on:click|stopPropagation
+12:17:20 AM 
+[vite-plugin-svelte] C:/repo
+sitory-un/frontend/src/pages
+/Documents/DocumentList.svel
+te:451:12 A11y: <div> with 
+click handler must have an 
+ARIA role
+449:             
+on:click={closePagesModal}
+450:         >
+451:             <div
+                 ^
+452:                 
+class="bg-white 
+dark:bg-slate-900 
+rounded-xl shadow-2xl 
+w-full max-w-4xl 
+max-h-[90vh] flex flex-col 
+overflow-hidden"
+453:                 
+on:click|stopPropagation
+12:17:20 AM 
+[vite-plugin-svelte] C:/repo
+sitory-un/frontend/src/pages
+/Documents/DocumentList.svel
+te:447:8 A11y: visible, 
+non-interactive elements 
+with an on:click event must 
+be accompanied by a 
+keyboard event handler. 
+Consider whether an 
+interactive element such as 
+<button type="button"> or 
+<a> might be more 
+appropriate. See https://sve
+lte.dev/docs/accessibility-w
+arnings#a11y-click-events-ha
+ve-key-events for more 
+details.
+445: 
+446:     {#if 
+showPagesModal}
+447:         <div
+             ^
+448:             
+class="fixed inset-0 z-50 
+flex items-center 
+justify-center p-4 
+bg-black/50 
+backdrop-blur-sm"
+449:             
+on:click={closePagesModal}
+12:17:20 AM 
+[vite-plugin-svelte] C:/repo
+sitory-un/frontend/src/pages
+/Documents/DocumentList.svel
+te:447:8 A11y: <div> with 
+click handler must have an 
+ARIA role
+445: 
+446:     {#if 
+showPagesModal}
+447:         <div
+             ^
+448:             
+class="fixed inset-0 z-50 
+flex items-center 
+justify-center p-4 
+bg-black/50 
+backdrop-blur-sm"
+449:             
+on:click={closePagesModal}
+12:17:20 AM 
+[vite-plugin-svelte] C:/repo
+sitory-un/frontend/src/pages
+/Documents/DocumentList.svel
+te:528:16 A11y: visible, 
+non-interactive elements 
+with an on:click event must 
+be accompanied by a 
+keyboard event handler. 
+Consider whether an 
+interactive element such as 
+<button type="button"> or 
+<a> might be more 
+appropriate. See https://sve
+lte.dev/docs/accessibility-w
+arnings#a11y-click-events-ha
+ve-key-events for more 
+details.
+526:                 
+class="w-full h-full flex 
+flex-col items-center 
+justify-center 
+pointer-events-none"
+527:             >
+528:                 <div
+                     ^
+529:                     
+class="h-[85vh] max-w-full 
+bg-white shadow-2xl 
+overflow-auto rounded-lg 
+pointer-events-auto flex 
+items-center justify-center 
+p-4"
+530:                     
+on:click|stopPropagation
+12:17:20 AM 
+[vite-plugin-svelte] C:/repo
+sitory-un/frontend/src/pages
+/Documents/DocumentList.svel
+te:528:16 A11y: <div> with 
+click handler must have an 
+ARIA role
+526:                 
+class="w-full h-full flex 
+flex-col items-center 
+justify-center 
+pointer-events-none"
+527:             >
+528:                 <div
+                     ^
+529:                     
+class="h-[85vh] max-w-full 
+bg-white shadow-2xl 
+overflow-auto rounded-lg 
+pointer-events-auto flex 
+items-center justify-center 
+p-4"
+530:                     
+on:click|stopPropagation
+12:17:20 AM 
+[vite-plugin-svelte] C:/repo
+sitory-un/frontend/src/pages
+/Documents/DocumentList.svel
+te:514:8 A11y: visible, 
+non-interactive elements 
+with an on:click event must 
+be accompanied by a 
+keyboard event handler. 
+Consider whether an 
+interactive element such as 
+<button type="button"> or 
+<a> might be more 
+appropriate. See https://sve
+lte.dev/docs/accessibility-w
+arnings#a11y-click-events-ha
+ve-key-events for more 
+details.
+512:     <!-- Detail 
+Preview Modal (Lightbox) -->
+513:     {#if 
+showDetailModal}
+514:         <div
+             ^
+515:             
+class="fixed inset-0 z-[60] 
+flex items-center 
+justify-center p-4 
+bg-black/90 
+backdrop-blur-md"
+516:             on:click={c
+loseDetailPreview}
+12:17:20 AM 
+[vite-plugin-svelte] C:/repo
+sitory-un/frontend/src/pages
+/Documents/DocumentList.svel
+te:514:8 A11y: <div> with 
+click handler must have an 
+ARIA role
+512:     <!-- Detail 
+Preview Modal (Lightbox) -->
+513:     {#if 
+showDetailModal}
+514:         <div
+             ^
+515:             
+class="fixed inset-0 z-[60] 
+flex items-center 
+justify-center p-4 
+bg-black/90 
+backdrop-blur-md"
+516:             on:click={c
+loseDetailPreview}
+12:17:20 AM 
+[vite-plugin-svelte] C:/repo
+sitory-un/frontend/src/pages
+/Documents/DocumentEdit.svel
+te:144:24 A11y: A form 
+label must be associated 
+with a control.
+142:                     
+<!-- Judul -->
+143:                     
+<div>
+144:                        
+ <label
+                            
+ ^
+145:                        
+     class="block text-sm 
+font-bold mb-2 
+text-slate-700 
+dark:text-slate-300"
+146:                        
+ >
+12:17:20 AM 
+[vite-plugin-svelte] C:/repo
+sitory-un/frontend/src/pages
+/Documents/DocumentEdit.svel
+te:160:28 A11y: A form 
+label must be associated 
+with a control.
+158:                     
+<div class="grid 
+md:grid-cols-2 gap-6">
+159:                        
+ <div>
+160:                        
+     <label
+                            
+     ^
+161:                        
+         class="block 
+text-sm font-bold mb-2 
+text-slate-700 
+dark:text-slate-300"
+162:                        
+     >
+12:17:20 AM 
+[vite-plugin-svelte] C:/repo
+sitory-un/frontend/src/pages
+/Documents/DocumentEdit.svel
+te:174:28 A11y: A form 
+label must be associated 
+with a control.
+172: 
+173:                        
+ <div>
+174:                        
+     <label
+                            
+     ^
+175:                        
+         class="block 
+text-sm font-bold mb-2 
+text-slate-700 
+dark:text-slate-300"
+176:                        
+     >
+12:17:20 AM 
+[vite-plugin-svelte] C:/repo
+sitory-un/frontend/src/pages
+/Documents/DocumentEdit.svel
+te:195:24 A11y: A form 
+label must be associated 
+with a control.
+193:                     
+<!-- Status -->
+194:                     
+<div>
+195:                        
+ <label
+                            
+ ^
+196:                        
+     class="block text-sm 
+font-bold mb-2 
+text-slate-700 
+dark:text-slate-300"
+197:                        
+ >
+12:17:20 AM 
+[vite-plugin-svelte] C:/repo
+sitory-un/frontend/src/pages
+/Documents/DocumentEdit.svel
+te:211:24 A11y: A form 
+label must be associated 
+with a control.
+209:                     
+<!-- Upload File (Optional) 
+-->
+210:                     
+<div>
+211:                        
+ <label
+                            
+ ^
+212:                        
+     class="block text-sm 
+font-bold mb-2 
+text-slate-700 
+dark:text-slate-300"
+213:                        
+ >
+12:17:20 AM 
+[vite-plugin-svelte] C:/repo
+sitory-un/frontend/src/pages
+/Users/UserList.svelte:361:2
+0 A11y: A form label must 
+be associated with a 
+control.
+359: 
+360:                 <div>
+361:                     
+<label
+                         ^
+362:                        
+ class="block text-sm 
+font-medium text-slate-700 
+dark:text-slate-300 mb-2"
+363:                        
+ >Name</label
+12:17:20 AM 
+[vite-plugin-svelte] C:/repo
+sitory-un/frontend/src/pages
+/Users/UserList.svelte:375:2
+0 A11y: A form label must 
+be associated with a 
+control.
+373: 
+374:                 <div>
+375:                     
+<label
+                         ^
+376:                        
+ class="block text-sm 
+font-medium text-slate-700 
+dark:text-slate-300 mb-2"
+377:                        
+ >Email</label
+12:17:20 AM 
+[vite-plugin-svelte] C:/repo
+sitory-un/frontend/src/pages
+/Users/UserList.svelte:389:2
+0 A11y: A form label must 
+be associated with a 
+control.
+387: 
+388:                 <div>
+389:                     
+<label
+                         ^
+390:                        
+ class="block text-sm 
+font-medium text-slate-700 
+dark:text-slate-300 mb-2"
+391:                     >
+12:17:20 AM 
+[vite-plugin-svelte] C:/repo
+sitory-un/frontend/src/pages
+/Users/UserList.svelte:407:2
+0 A11y: A form label must 
+be associated with a 
+control.
+405: 
+406:                 <div>
+407:                     
+<label
+                         ^
+408:                        
+ class="block text-sm 
+font-medium text-slate-700 
+dark:text-slate-300 mb-2"
+409:                        
+ >Role</label
+[32mΓ£ô[39m 52 modules transformed.
+[31mx[39m Build failed in 
+1.47s
+[31merror during build:
+[31mCould not resolve 
+"../services/authService" 
+from "src/components/common/
+Sidebar.svelte"[31m
+file: [36mC:/repository-un/
+frontend/src/components/comm
+on/Sidebar.svelte[31m
+    at getRollupError (file:
+///C:/repository-un/frontend
+/node_modules/rollup/dist/es
+/shared/parseAst.js:402:41)
+    at error (file:///C:/rep
+ository-un/frontend/node_mod
+ules/rollup/dist/es/shared/p
+arseAst.js:398:42)
+    at ModuleLoader.handleIn
+validResolvedId (file:///C:/
+repository-un/frontend/node_
+modules/rollup/dist/es/share
+d/node-entry.js:21687:24)
+    at file:///C:/repository
+-un/frontend/node_modules/ro
+llup/dist/es/shared/node-ent
+ry.js:21647:26[39m

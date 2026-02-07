@@ -1,6 +1,6 @@
 <script>
-  import Sidebar from "../components/Sidebar.svelte";
-  import Topbar from "../components/Topbar.svelte";
+  import Sidebar from "../components/common/Sidebar.svelte";
+  import Topbar from "../components/common/Topbar.svelte";
 </script>
 
 <div class="flex h-screen overflow-hidden">

@@ -1,49 +1,142 @@
-const API = "http://localhost:8080/api/documents";
+/**
+ * Document Service
+ * =================
+ * Service untuk menangani operasi CRUD dokumen.
+ * 
+ * Contoh penggunaan:
+ * ```javascript
+ * import { documentService } from '@/services';
+ * 
+ * // Ambil semua dokumen
+ * const docs = await documentService.getAll();
+ * 
+ * // Ambil dokumen by ID
+ * const doc = await documentService.getById('123');
+ * ```
+ */
 
-export const getDocuments = async () => {
-  const response = await fetch(API);
-  if (!response.ok) throw new Error("Gagal mengambil data dokumen");
-  return response.json();
-};
+import { API_ENDPOINTS } from "../config";
 
-export const getDocumentById = async (id) => {
-  const response = await fetch(`${API}/${id}`);
-  if (!response.ok) throw new Error("Gagal mengambil data dokumen");
-  return response.json();
-};
+class DocumentService {
+  /**
+   * Ambil semua dokumen
+   * @returns {Promise<Array>} - Array of documents
+   * @throws {Error} - Jika gagal mengambil data
+   */
+  async getAll() {
+    const response = await fetch(API_ENDPOINTS.DOCUMENTS);
+    if (!response.ok) {
+      throw new Error("Gagal mengambil data dokumen");
+    }
+    return response.json();
+  }
 
-export const createDocument = async (formData) => {
-  const response = await fetch(API, {
-    method: "POST",
-    body: formData,
-  });
-  if (!response.ok) throw new Error("Gagal membuat dokumen");
-  return response.json();
-};
+  /**
+   * Ambil dokumen berdasarkan ID
+   * @param {string} id - Document ID
+   * @returns {Promise<Object>} - Document object
+   * @throws {Error} - Jika dokumen tidak ditemukan
+   */
+  async getById(id) {
+    const response = await fetch(API_ENDPOINTS.DOCUMENT_BY_ID(id));
+    if (!response.ok) {
+      throw new Error("Gagal mengambil data dokumen");
+    }
+    return response.json();
+  }
 
-export const updateDocument = async (id, formData) => {
-  const response = await fetch(`${API}/${id}`, {
-    method: "PUT",
-    body: formData,
-  });
-  if (!response.ok) throw new Error("Gagal mengupdate dokumen");
-  return response.json();
-};
+  /**
+   * Buat dokumen baru
+   * @param {FormData} formData - Form data berisi file dan metadata
+   * @returns {Promise<Object>} - Created document
+   * @throws {Error} - Jika gagal membuat dokumen
+   */
+  async create(formData) {
+    const response = await fetch(API_ENDPOINTS.DOCUMENTS, {
+      method: "POST",
+      body: formData,
+    });
+    if (!response.ok) {
+      throw new Error("Gagal membuat dokumen");
+    }
+    return response.json();
+  }
 
-export const deleteDocument = async (id) => {
-  const response = await fetch(`${API}/${id}`, {
-    method: "DELETE",
-  });
-  if (!response.ok) throw new Error("Gagal menghapus dokumen");
-  return response.json();
-};
+  /**
+   * Update dokumen
+   * @param {string} id - Document ID
+   * @param {FormData} formData - Form data berisi file dan metadata
+   * @returns {Promise<Object>} - Updated document
+   * @throws {Error} - Jika gagal mengupdate
+   */
+  async update(id, formData) {
+    const response = await fetch(API_ENDPOINTS.DOCUMENT_BY_ID(id), {
+      method: "PUT",
+      body: formData,
+    });
+    if (!response.ok) {
+      throw new Error("Gagal mengupdate dokumen");
+    }
+    return response.json();
+  }
 
-export const downloadDocument = (id) => {
-  window.open(`http://localhost:8080/download/${id}`, "_blank");
-};
+  /**
+   * Hapus dokumen
+   * @param {string} id - Document ID
+   * @returns {Promise<Object>} - Response message
+   * @throws {Error} - Jika gagal menghapus
+   */
+  async delete(id) {
+    const response = await fetch(API_ENDPOINTS.DOCUMENT_BY_ID(id), {
+      method: "DELETE",
+    });
+    if (!response.ok) {
+      throw new Error("Gagal menghapus dokumen");
+    }
+    return response.json();
+  }
 
-export const getDocumentPages = async (id) => {
-  const response = await fetch(`${API}/pages/${id}`);
-  if (!response.ok) throw new Error("Gagal mengambil halaman dokumen");
-  return response.json();
-};
+  /**
+   * Download dokumen
+   * Membuka tab baru untuk download file
+   * @param {string} id - Document ID
+   */
+  download(id) {
+    window.open(API_ENDPOINTS.DOCUMENT_DOWNLOAD(id), "_blank");
+  }
+
+  /**
+   * Ambil halaman-halaman PDF dari dokumen
+   * @param {string} id - Document ID
+   * @returns {Promise<Array>} - Array of page filenames
+   */
+  async getPages(id) {
+    const response = await fetch(API_ENDPOINTS.DOCUMENT_PAGES(id));
+    if (!response.ok) {
+      throw new Error("Gagal mengambil halaman dokumen");
+    }
+    return response.json();
+  }
+
+  /**
+   * Dapatkan URL untuk preview halaman PDF
+   * @param {string} id - Document ID
+   * @param {string} page - Page filename
+   * @returns {string} - Preview URL
+   */
+  getPreviewUrl(id, page) {
+    return API_ENDPOINTS.DOCUMENT_PREVIEW(id, page);
+  }
+}
+
+// Export functions untuk backward compatibility
+export const getDocuments = () => documentService.getAll();
+export const getDocumentById = (id) => documentService.getById(id);
+export const createDocument = (formData) => documentService.create(formData);
+export const updateDocument = (id, formData) => documentService.update(id, formData);
+export const deleteDocument = (id) => documentService.delete(id);
+export const downloadDocument = (id) => documentService.download(id);
+export const getDocumentPages = (id) => documentService.getPages(id);
+
+export const documentService = new DocumentService();
+export default documentService;
