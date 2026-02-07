@@ -1,7 +1,7 @@
 <script>
     import { link } from "svelte-spa-router";
     import { onMount } from "svelte";
-    import authService from "../services/authService";
+    import authService from "../../services/authService";
 
     let user = null;
 
